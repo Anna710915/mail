@@ -64,6 +64,11 @@ namespace ssp_8
                 mailEntry.body = body;
                 mailEntry.setAddresses(listAddresses);
 
+                if(filePath != "")
+                {
+                    mailEntry.filePath = filePath;
+                }
+
                 mail.Send(mailEntry);
 
             } catch (Exception ex)

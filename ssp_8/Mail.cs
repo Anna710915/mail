@@ -19,25 +19,31 @@ namespace ssp_8
         {
             try
             {
+
                 foreach (String address in mailEntry.getAddresses())
                 {
                     MailAddress from = new MailAddress(MailFrom, Name);
-                    // кому отправляем
                     MailAddress to = new MailAddress(address);
-                    // создаем объект сообщения
                     MailMessage message = new MailMessage(from, to);
-                    // тема письма
+
                     message.Subject = mailEntry.header;
-                    // текст письма
                     message.Body = mailEntry.body;
-                    // адрес smtp-сервера и порт, с которого будем отправлять письмо
+
+                    if(mailEntry.filePath != null && mailEntry.filePath != "")
+                    {
+                        message.Attachments.Add(new Attachment(mailEntry.filePath));
+                    }
+                    
+
                     SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25);
-                    // логин и пароль
                     smtp.Credentials = new NetworkCredential("anna.merkul@bk.ru", "aRVJtxbGRUDkbyeDiph2");
                     smtp.EnableSsl = true;
+
                     smtp.Send(message);
+
                     MessageBox.Show("Send mail to " + address);
                 }
+
             } catch (Exception ex)
             {
                 throw new Exception(ex.Message);

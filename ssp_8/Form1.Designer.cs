@@ -40,13 +40,14 @@ namespace ssp_8
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxAddresses
             // 
             this.textBoxAddresses.Location = new System.Drawing.Point(50, 48);
             this.textBoxAddresses.Name = "textBoxAddresses";
-            this.textBoxAddresses.Size = new System.Drawing.Size(681, 26);
+            this.textBoxAddresses.Size = new System.Drawing.Size(977, 26);
             this.textBoxAddresses.TabIndex = 0;
             // 
             // label1
@@ -54,15 +55,15 @@ namespace ssp_8
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(46, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(364, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Адресаты";
+            this.label1.Text = "Адресаты (ввод через запятую, без пробелов)";
             // 
             // textBoxHeaders
             // 
             this.textBoxHeaders.Location = new System.Drawing.Point(50, 118);
             this.textBoxHeaders.Name = "textBoxHeaders";
-            this.textBoxHeaders.Size = new System.Drawing.Size(681, 26);
+            this.textBoxHeaders.Size = new System.Drawing.Size(977, 26);
             this.textBoxHeaders.TabIndex = 2;
             // 
             // label2
@@ -79,7 +80,7 @@ namespace ssp_8
             this.textBoxBody.Location = new System.Drawing.Point(51, 196);
             this.textBoxBody.Multiline = true;
             this.textBoxBody.Name = "textBoxBody";
-            this.textBoxBody.Size = new System.Drawing.Size(681, 351);
+            this.textBoxBody.Size = new System.Drawing.Size(976, 351);
             this.textBoxBody.TabIndex = 4;
             // 
             // label3
@@ -113,9 +114,9 @@ namespace ssp_8
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(601, 564);
+            this.button3.Location = new System.Drawing.Point(876, 564);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 42);
+            this.button3.Size = new System.Drawing.Size(151, 42);
             this.button3.TabIndex = 9;
             this.button3.Text = "Отправить";
             this.button3.UseVisualStyleBackColor = true;
@@ -135,11 +136,22 @@ namespace ssp_8
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(595, 575);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(193, 24);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Зашифровать файл";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 618);
+            this.ClientSize = new System.Drawing.Size(1039, 618);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -171,6 +183,7 @@ namespace ssp_8
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

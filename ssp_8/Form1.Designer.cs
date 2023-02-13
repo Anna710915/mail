@@ -40,7 +40,7 @@ namespace ssp_8
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEncrypt = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxAddresses
@@ -136,22 +136,23 @@ namespace ssp_8
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // checkBox1
+            // checkBoxEncrypt
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(595, 575);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(193, 24);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Зашифровать файл";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxEncrypt.AutoSize = true;
+            this.checkBoxEncrypt.Location = new System.Drawing.Point(595, 575);
+            this.checkBoxEncrypt.Name = "checkBoxEncrypt";
+            this.checkBoxEncrypt.Size = new System.Drawing.Size(193, 24);
+            this.checkBoxEncrypt.TabIndex = 11;
+            this.checkBoxEncrypt.Text = "Зашифровать файл";
+            this.checkBoxEncrypt.UseVisualStyleBackColor = true;
+            this.checkBoxEncrypt.CheckedChanged += new System.EventHandler(this.checkBoxEncrypt_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 618);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxEncrypt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -183,7 +184,7 @@ namespace ssp_8
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxEncrypt;
     }
 }
 

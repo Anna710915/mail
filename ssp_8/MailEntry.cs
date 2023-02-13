@@ -11,6 +11,7 @@ namespace ssp_8
         public String header { get; set; }
         public String body { get; set; }
         public String filePath { get; set; }
+        public Boolean encrypt { get; set; }
         public List<String> addresses = new List<String>();
 
         public MailEntry()
